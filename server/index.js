@@ -4,12 +4,14 @@ import TodoRoute from "./routes/todo.js";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import { connectToDB } from "./utils/connect.js";
+import cookieParser from "cookie-parser";
 
 const app= express();
 const PORT=3000;
 
 dotenv.config();
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(cookieParser());
 app.use("/api/user",AuthRoute);
 app.use("/api/todos",TodoRoute);
 
