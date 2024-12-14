@@ -1,10 +1,15 @@
 import express from "express";
 import AuthRoute from "./routes/auth.js";
 import TodoRoute from "./routes/todo.js";
+import bodyParser from "body-parser";
+import dotenv from "dotenv";
+import { connectToDB } from "./utils/connect.js";
 
 const app= express();
 const PORT=3000;
 
+dotenv.config();
+app.use(bodyParser.json())
 app.use("/api/user",AuthRoute);
 app.use("/api/todos",TodoRoute);
 
@@ -22,4 +27,5 @@ app.use((err,req,res,next)=>{
 
 app.listen(PORT,()=>{
     console.log(`listening on port ${PORT}`);
+    connectToDB()
 });
