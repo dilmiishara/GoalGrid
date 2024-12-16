@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 @font-face{
-  font-family: "Regular";
+  font-family:"Regular";
   src: local("Poppins-Regular"),
-    url("./assets/fonts/poppins/Poppins-Regular.ttf");
+    url("./assets/fonts/Poppins-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face{
-  font-family: "Bold";
-  src: local("Poppins-Regular"),
-    url("./assets/fonts/poppins/Poppins-Bold.ttf");
+  font-family:"Bold";
+  src: local("Poppins-Bold"),
+    url("./assets/fonts/Poppins-Bold.ttf");
   font-weight: 700;
 }
 
