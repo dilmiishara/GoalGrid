@@ -6,14 +6,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';  // Fixed impor
 import Todos from './components/Todos';
 import Register from './components/Register';
 import Login from './components/Login';
+import { Toaster } from 'react-hot-toast';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Toaster position="top-center"/>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} /> {/* Login page */}
+        <Route path="/" element={<Todos />} /> {/* Login page */}
         <Route path="/register" element={<Register />} />
-        <Route path="/todos" element={<Todos />} /> {/* Todo page after login */}
+        <Route path="/login" element={<Login />} /> {/* Todo page after login */}
       </Routes>
     </BrowserRouter>
   </StrictMode>
