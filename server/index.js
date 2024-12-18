@@ -13,7 +13,7 @@ const PORT = 3000;
 dotenv.config();
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "http://localhost:5174"],  // Allow both origins
+  origin: ["http://localhost:5175"],  // Allow the correct origin for your frontend
   credentials: true,  // Allow credentials (cookies, headers, etc.)
 };
 
